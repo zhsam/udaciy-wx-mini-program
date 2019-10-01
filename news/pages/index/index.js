@@ -53,5 +53,13 @@ Page({
         callback && callback()
       }
     })
+  },
+  onTapPageList(item){
+    var clickedPage = item.currentTarget.dataset.item
+    var newIndex = this.data.pageList.indexOf(clickedPage)
+    this.setData({
+      pageIndex: newIndex
+    })
+    this.getNewsList()
   }
 })
