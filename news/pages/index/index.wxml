@@ -1,0 +1,41 @@
+<view class="nav-wrapper">
+  <view class="nav" wx:for="{{pageList}}">
+    {{item}}
+    <view wx:if="{{pageList[pageIndex]==item}}" class="nav-current-page"></view>
+  </view>
+</view>
+
+<view class="news-wrapper">
+  <view class="news-list" wx:for="{{newsList}}">
+    <view class="news-headline" wx:if="{{item.index == 0}}">
+      <view class="news-headline-text-wrap">
+        <view class="news-headline-title">{{item.title}}</view>
+        <view class="news-headline-info">
+          <view class="news-headline-source">{{item.source}}</view>
+          <view class="news-headline-time">{{item.time}}</view>
+        </view>
+      </view>
+      
+      <view class="news-headline-img-wrapper">
+        <image class="news-headline-img" src="{{item.img}}"></image>
+      </view>
+    </view>
+
+    <view class="news-non-headline" wx:if="{{item.index != 0}}">
+      <view class="news-text-wrap">
+        <view class="news-title">{{item.title}}</view>
+        <view class="news-info">
+          <view class="news-source">{{item.source}}</view>
+          <view class="news-time">{{item.time}}</view>
+        </view>
+      </view>
+      <view class="news-img-wrap">
+        <image class="news-img" src="{{item.img}}"></image>
+      </view>
+    </view>
+
+
+    
+  </view>
+
+</view>
