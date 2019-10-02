@@ -1,0 +1,21 @@
+<view class="news-wrapper">
+
+  <view class="news-info-wrapper">
+    <view class="news-title">{{newsDetail[0].title}}</view>
+
+    <view class="news-info-detail-wrapper">
+      <view class="news-source">{{newsDetail[0].source}}</view>
+      <view class="news-time">{{newsDetail[0].time}}</view>
+      <view class="news-read-count">阅读 {{newsDetail[0].readCount}}</view>
+    </view>
+  </view>
+
+  <view wx:for="{{newsDetail[0].content}}" class="news-content-wrapper">
+    <view class="news-content-text" wx:if="{{item.type == 'p'}}">
+      {{item.text}}
+    </view>
+    <image class="news-content-img" wx:if="{{item.type == 'image'}}" src="{{item.src}}"></image>
+
+  </view>
+
+</view>

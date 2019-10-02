@@ -1,0 +1,42 @@
+.news-wrapper {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 30rpx;
+}
+
+.news-title {
+  display: flex;
+  width: 700rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.news-info-detail-wrapper {
+  display: flex;
+  flex-wrap: row wrap;
+}
+
+.news-source, .news-time, .news-read-count {
+  font-size: 30rpx;
+  line-height: 42rpx;
+  padding-right: 30rpx;
+  color: rgba(0, 0, 0, 0.6)
+}
+
+.news-read-count {
+  position: absolute;
+  right: 0;
+}
+
+.news-read-count {
+  justify-content: space-between;
+}
+
+.news-content-text {
+  font-size: 30rpx;
+  padding: 30rpx;
+}
+
+.news-content-img {
+  width: 100%;
+}

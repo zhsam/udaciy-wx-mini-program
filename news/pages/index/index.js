@@ -21,6 +21,11 @@ Page({
   onLoad(){
     this.getNewsList()
   },
+  onPullDownRefresh() {
+    this.getNewsList(() => {
+      wx.stopPullDownRefresh()
+    })
+  },
   getNewsList(callback){
     wx.request({
       url: 'https://test-miniprogram.com/api/news/list',
@@ -61,5 +66,13 @@ Page({
       pageIndex: newIndex
     })
     this.getNewsList()
+  },
+  onTapNews(item){
+    var pageId = item.currentTarget.dataset.item.id
+    console.log(pageId)
+    wx.navigateTo({
+      url: '/pages/detail/detail?pageId=' + pageId,
+    })
+
   }
 })

@@ -28,13 +28,14 @@
 /* news */
 
 .news-headline {
+  position: relative;
   height: 350rpx;
   margin: 30rpx;
   background-color: rgba(0,0,0, 0.3);
 }
 
 .news-headline-img {
-  top: 10%;
+  top: 0;
   position: absolute;
   height: 350rpx;
   width: 700rpx;
